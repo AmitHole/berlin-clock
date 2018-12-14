@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Sonar') {
             steps {
-                sh "mvn sonar:sonar -Dsonar.host.url=${env.SONARQUBE_HOST}"
+                sh "mvn sonar:sonar -Dsonar.host.url=http://192.168.33.11:9000"
             }
         }
     }
